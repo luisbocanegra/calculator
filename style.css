@@ -1,1 +1,176 @@
+:root {
+  --primary: #005fae;
+  --onPrimary: #ffffff;
+  --primaryContainer: #d3e4ff;
+  --onPrimaryContainer: #001c3b;
+  --secondary: #4c5f7c;
+  --onSecondary: #ffffff;
+  --secondaryContainer: #d3e4ff;
+  --onSecondaryContainer: #051c35;
+  --tertiary: #745086;
+  --onTertiary: #ffffff;
+  --tertiaryContainer: #f7d9ff;
+  --onTertiaryContainer: #2d0b3e;
+  --error: #c1000c;
+  --onError: #ffffff;
+  --errorContainer: #ffdad4;
+  --onErrorContainer: #410001;
+  --background: #fdfcff;
+  --onBackground: #191c20;
+  --surface: #fdfcff;
+  --onSurface: #191c20;
+  --surfaceVariant: #dce3f2;
+  --onSurfaceVariant: #404753;
+  --outline: #707784;
+  --shadow: #000000;
+  --inverseSurface: #2e3035;
+  --inverseOnSurface: #eff0f6;
+  --inversePrimary: #a3c9ff;
+  --surface: #fdfcff;
+  --surface1: #f0f3fb;
+  --surface2: #e9eff8;
+  --surface3: #e2eaf6;
+  --surface4: #e0e8f6;
+  --surface5: #dbe5f4;
+  --gap: 6px;
+  --radius: 25px;
+  --radius2: 12px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  border: 0px;
+}
 
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Roboto";
+  background-color: var(--surface);
+  font-weight: 700;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons-area {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 550px;
+  gap: var(--gap);
+
+  border-radius: var(--radius2);
+  background-color: var(--surface1);
+  padding: 20px;
+  flex: 1;
+}
+
+.buttons-area > input {
+  flex: 1;
+}
+
+.numpad {
+  display: flex;
+  flex-direction: column;
+  flex: 4.2;
+  gap: var(--gap);
+}
+
+.numpad > * {
+  display: flex;
+  flex: 1;
+  gap: var(--gap);
+}
+
+button {
+  flex: 1;
+  border-radius: var(--radius);
+  background-color: var(--primaryContainer);
+  color: var(--onPrimaryContainer);
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+button:hover {
+  background-color: var(--tertiaryContainer);
+  color: var(--onTertiaryContainer);
+  font-size: 1.7rem;
+}
+
+.top {
+  display: flex;
+  flex: 4;
+  gap: var(--gap);
+}
+
+.bottom {
+  display: flex;
+  flex: 1;
+  gap: var(--gap);
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--gap);
+}
+
+.right > * {
+  flex: 1;
+}
+
+input {
+  text-align: right;
+  padding: 10px;
+  flex: 1;
+  background-color: var(--surface);
+  color: var(--onSecondaryContainer);
+  border-radius: var(--radius2);
+  border: 2px solid var(--surface2);
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+input:focus-visible {
+  outline: none;
+  border: 2px solid var(--primary);
+}
+
+.zero-division-error {
+  color: var(--error);
+  font-weight: 900;
+}
+
+.input-error {
+  border: 2px solid var(--error);
+  color: var(--onErrorContainer);
+  background-color: var(--errorContainer);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+a {
+  color: var(--onSurfaceVariant);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--primary);
+}
+
+footer {
+  height: 50px;
+  font-size: 1.2rem;
+}
